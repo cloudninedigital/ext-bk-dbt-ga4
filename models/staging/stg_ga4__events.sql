@@ -31,7 +31,7 @@ include_event_key as (
             CAST(session_id as STRING),
             event_name,
             CAST(event_timestamp as STRING),
-            to_json_string(event_params)
+            CAST(FARM_FINGERPRINT(to_json_string(event_params)) AS STRING)
         ], ""))) as event_key -- Surrogate key for unique events.  
     from include_session_partition_key
 ),
