@@ -27,9 +27,9 @@
         partition_by={
             "field": "session_partition_date",
             "data_type": "date",
-            "granularity": "day"
+            "granularity": "day",
+            "copy_partitions": true
         },
-        partitions = partitions_to_replace
     )
 }}
 

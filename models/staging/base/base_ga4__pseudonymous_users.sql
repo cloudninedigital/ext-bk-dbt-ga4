@@ -21,14 +21,14 @@
 {{
     config(
         materialized = 'incremental',
-        unique_key='occurrence_date',
         incremental_strategy='insert_overwrite',
         enabled=false,
         partition_by={
             "field": "occurrence_date",
             "data_type": "date",
+            "copy_partitions": true
+
         },
-        partitions = partitions_to_replace,
     )
 }}
 

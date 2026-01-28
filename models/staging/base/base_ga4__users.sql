@@ -22,14 +22,14 @@
     config(
         pre_hook="{{ ga4.combine_property_data() }}" if var('combined_dataset', false) else "",
         materialized = 'incremental',
-        unique_key='occurrence_date',
         incremental_strategy='insert_overwrite',
         enabled=false,
         partition_by={
             "field": "occurrence_date",
             "data_type": "date",
+            "copy_partitions": true
+
         },
-        partitions = partitions_to_replace,
     )
 }}
 

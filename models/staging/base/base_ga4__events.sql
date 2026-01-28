@@ -26,9 +26,9 @@
     incremental_strategy='insert_overwrite',
     partition_by={
         "field": "event_date_dt",
-        "data_type": "date"
+        "data_type": "date",
+        "copy_partitions": true
     },
-    partitions = partitions_to_replace,
             cluster_by=['event_name']
 
   )

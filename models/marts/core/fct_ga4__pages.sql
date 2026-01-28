@@ -27,8 +27,9 @@
             "field": "event_date_dt",
             "data_type": "date",
             "granularity": "day"
+            "copy_partitions": true
+
         },
-        partitions = partitions_to_replace
     )
 }}
 
