@@ -26,7 +26,7 @@
         partition_by={
             "field": "event_date_dt",
             "data_type": "date",
-            "granularity": "day"
+            "granularity": "day",
             "copy_partitions": true
 
         },

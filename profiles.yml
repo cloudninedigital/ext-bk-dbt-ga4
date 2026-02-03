@@ -1,0 +1,25 @@
+ga4:
+  outputs:
+    dev:
+      schema: denniscloudnine
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: europe-west4
+      method: oauth
+      priority: interactive
+      project: dbk-dwh-dev
+      threads: 7
+      type: bigquery
+      maximum_bytes_billed: 500000000000 # 50 GB
+  target: dev
+
+# elementary:
+#   outputs:
+#     default:
+#       type: "bigquery"
+#       dataset: "denniscloudnine_elementary"
+#       method: oauth
+#       threads: 5
+#       priority: interactive
+#       location: europe-west4
+#   target: default
